@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 
 public class Main {
@@ -6,24 +7,42 @@ public class Main {
 
         ArrayList<Cliente> clientes = new ArrayList<>();
 
-        LocalDate fecha1 = LocalDate.of(2022, 04, 15);
-        
-        LocalDate fecha2 = LocalDate.of(2021, 05, 30);
+
+        LocalDate fecha1 = LocalDate.of(2012, 04, 15);
+        LocalDate momentoActual = LocalDate.now();
+        long antiguedad = ChronoUnit.MONTHS.between(fecha1, momentoActual);
         
         Cuenta cuenta1 = new Cuenta(1, true, 500.0f);
         Cuenta cuenta2 = new Cuenta(2, true, 350.0f);
 
+        Cuenta[] cuentas = {cuenta1, cuenta2};
+
         Prestamo prestamo1 = new Prestamo(1, 2000f);
-
-        Cuenta cuenta3 = new Cuenta(1, true, 350.0f);
-        Cuenta cuenta4 = new Cuenta(2, true, 550.0f);
-
-        Prestamo prestamo2 = new Prestamo(1, 5000f);
         
-        Prestamo[] prestamos2 = {prestamo2};
-        Cuenta[] cuentas2 = {cuenta3, cuenta4};
+        Prestamo[] prestamos = {prestamo1};
 
-        if ()
+        if (Cliente.getIngresoMensual() > 2000 && Cliente.calculoAntiguedad() > 12 ) {
+            
+            ClienteA cliente = new ClienteA ();
+        }else if (Cliente.getIngresomensual() > 0) {
+
+            ClienteB clienteb = new Clienteb();
+        }else {
+            Estudiante estudiante = new Estudiante(null, null, null, null, null, fecha1, cuenta2)
+        }
+
+        Long idBucado = 5l;    
+        
+        Float ingresoMensual = 0f;
+
+        Cliente cliente = new Cliente;
+
+        for (int i = 0; i < clientes.size(); i++) {
+            if (clientes.get(i).getIdCliente() == id) {
+                clientes.remove(i);
+                
+            }
+        }
 
        /*
         ClienteB clienteB1 = new ClienteB(2l, "Ricardo", "Gomez", "242342",

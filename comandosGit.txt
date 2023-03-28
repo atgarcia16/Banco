@@ -1,0 +1,34 @@
+
+Pasos para subir nuestro repositorio a github/gitlab
+
+
+* Como primer paso debemos crear el repositorio en github
+
+* Luego debemos indicarle a git mediante el comando "git remote add origin url-repositorio" que alojaremos nuestro codigo en ese repositorio
+
+* Creamos la rama en la cual trabajaremos localmente: 
+
+  git checkout -b feature/Banco-01
+
+* Trabajamos en esa rama, una vez que verificamos que todo lo que realizamos funciona y esta sin errores realizamos merge con la rama main. Para 
+  poder realizarlo primero debemos movernos a la rama main. 
+
+  git checkout main // Comando que usamos para pasar a la rama main.
+
+  Luego el comando para unir o mergear la rama feature/Banco-01 con main:
+  
+  git merge features/Banco-01 -m "mensaje"
+
+* Al finalizar el merge a la rama main estamos en condiciones de pasar todo a stage, es decir que todos los archivos estan a disposicion para el commit:
+  
+  git add . /Con este comando ponemos a disposicion todo el contenido de la carpeta en la que estamos trabajando sobre la rama main.
+
+* Relizamos el commit para confirmar que los archivos puesos a disposicion estan listos.
+
+  git commit -m "mensaje claro de lo que se crea o modifica"
+
+
+* Finalmente realizaremos el push para poder subir todos los cambios del repositorio local al remoto en github.
+
+  git push origin main.
+
